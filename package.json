@@ -1,0 +1,30 @@
+{
+  "name": "business-intelligence-platform",
+  "version": "1.0.0",
+  "description": "Business Intelligence & Risk Assessment Platform",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/business-intelligence-platform.git"
+  },
+  "keywords": [
+    "business-intelligence",
+    "risk-assessment",
+    "analytics",
+    "valuation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/business-intelligence-platform/issues"
+  },
+  "homepage": "https://yourusername.github.io/business-intelligence-platform"
+} 

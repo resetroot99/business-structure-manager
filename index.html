@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shugl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Shugl</h1>
+        <div class="nav-links">
+            <a href="#dashboard" class="nav-link">Dashboard</a>
+            <a href="#canvas" class="nav-link">Canvas</a>
+            <a href="#settings" class="nav-link">Settings</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="dashboard" class="section">
+            <h2>Dashboard</h2>
+            <div class="overview">
+                <div class="card">
+                    <h3>Upcoming Taxes</h3>
+                    <p id="upcomingTaxes">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total Rebates</h3>
+                    <p id="totalRebates">$0</p>
+                </div>
+                <div class="card">
+                    <h3>Reminders</h3>
+                    <p id="reminders">0</p>
+                </div>
+                <div class="card">
+                    <h3>Compliance Status</h3>
+                    <p id="complianceStatus">Good Standing</p>
+                </div>
+                <div class="card">
+                    <h3>Active Partners</h3>
+                    <p id="activePartners">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tax-manager" class="section">
+            <h2>Tax Management</h2>
+            <div class="tax-tools">
+                <div class="county-selector">
+                    <label for="county">Select County:</label>
+                    <select id="county" onchange="updateTaxRates()">
+                        <option value="">Select County</option>
+                    </select>
+                </div>
+                <div class="tax-calculator">
+                    <h3>Tax Calculator</h3>
+                    <input type="number" id="income" placeholder="Enter income">
+                    <button class="btn" onclick="calculateTax()">Calculate</button>
+                    <p id="taxResult"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="compliance" class="section">
+            <h2>Compliance Center</h2>
+            <div class="compliance-tools">
+                <div class="document-tracker">
+                    <h3>Required Documents</h3>
+                    <ul id="documentList"></ul>
+                </div>
+                <div class="deadline-tracker">
+                    <h3>Upcoming Deadlines</h3>
+                    <ul id="deadlineList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="partners" class="section">
+            <h2>Partner Collaboration</h2>
+            <div class="partner-tools">
+                <div class="partner-list">
+                    <h3>Active Partners</h3>
+                    <ul id="partnerList"></ul>
+                </div>
+                <div class="collaboration-tools">
+                    <button class="btn" onclick="invitePartner()">Invite Partner</button>
+                    <button class="btn" onclick="shareDocuments()">Share Documents</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas" class="section">
+            <h2>Business Canvas</h2>
+            <div class="canvas-container">
+                <canvas id="businessCanvas"></canvas>
+                <div class="canvas-tools">
+                    <button class="btn" onclick="addNode()">Add Node</button>
+                    <button class="btn" onclick="connectNodes()">Connect</button>
+                    <button class="btn" onclick="saveCanvas()">Save</button>
+                </div>
+            </div>
+            <div class="canvas-controls">
+                <button class="btn" onclick="loadBusinessData()">Load Data</button>
+                <button class="btn" onclick="saveBusinessData()">Save Data</button>
+            </div>
+        </div>
+
+        <div id="wallet-section" class="section">
+            <h2>Wallet Connection</h2>
+            <div class="wallet-options">
+                <button class="btn" onclick="app.credentialManager.connectWallet('metamask')">
+                    Connect MetaMask
+                </button>
+                <button class="btn" onclick="app.credentialManager.connectWallet('walletconnect')">
+                    Connect WalletConnect
+                </button>
+            </div>
+        </div>
+
+        <div id="document-section" class="section">
+            <h2>Document Management</h2>
+            <div class="document-tools">
+                <div class="upload-area">
+                    <input type="file" id="document-upload" multiple>
+                    <select id="document-category">
+                        <option value="legal">Legal</option>
+                        <option value="financial">Financial</option>
+                        <option value="compliance">Compliance</option>
+                        <option value="contracts">Contracts</option>
+                    </select>
+                    <button class="btn" onclick="handleDocumentUpload()">Upload</button>
+                </div>
+                <div class="document-list">
+                    <!-- Documents will be listed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="modules/businessManager.js"></script>
+    <script src="modules/taxManager.js"></script>
+    <script src="modules/rebateManager.js"></script>
+    <script src="modules/strategyManager.js"></script>
+    <script src="modules/partnerManager.js"></script>
+    <script src="modules/complianceManager.js"></script>
+    <script src="modules/dashboard.js"></script>
+    <script src="modules/canvasManager.js"></script>
+    <script src="modules/tokenManager.js"></script>
+    <script src="modules/gamificationManager.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> 
