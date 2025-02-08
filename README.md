@@ -72,6 +72,10 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 ## 📧 Contact
 
-[Your Name] - [@twitter_handle](https://twitter.com/[your-handle]) - email@example.com
+Ali Jakvani (aperoot)  
+Email: ali@jakvan.io  
+Company: Reset AG
 
-Project Link: [https://github.com/[your-username]/business-structure-manager](https://github.com/[your-username]/business-structure-manager) 
+Project Link: [https://github.com/resetroot99/business-structure-manager](https://github.com/resetroot99/business-structure-manager) 
+
+Live demo coming soon! 
