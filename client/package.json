@@ -2,7 +2,7 @@
   "name": "business-structure-manager",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://alireset.github.io/business-structure-manager",
+  "homepage": "https://resetroot99.github.io/business-structure-manager",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
